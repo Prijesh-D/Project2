@@ -35,7 +35,7 @@ class Main:
             graph.addWeightedEdge(nodelist[num], nodelist[num+1], 1)
         return graph
     
-    def dijkstras(start):
+    def dijkstras(start): #Had big problems with this one
         startnode = start
         distanceDict = dict()
         distanceDict[startnode] = 0
