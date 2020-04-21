@@ -4,8 +4,8 @@
 
 
 class Node:
-    def _init_(self, name):
-        self.nodeName = name
+    def _init_(self, nodeValue):
+        self.nodeVal = nodeValue
         self.partners = []
 
 class DirectedGraph:
@@ -19,8 +19,6 @@ class DirectedGraph:
     def addDirectedEdge(self, first, second):
         if first not in second.partners:
             first.partners.append(second)
-        else
-            return
     
     def removeDirectedEdge(self, first,second):
         if first not in second.partners or second not in first.partners:
