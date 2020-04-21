@@ -12,13 +12,13 @@ class Main:
             for number in numbers:
                 graph.addNode(num)
             nodelist = graph.getAllNodes():
-            for node in nodelist:
-                indexatnode=nodelist.index(node)
+            for node1 in nodelist:
+                indexatnode=nodelist.index(node1)
                 randomNum = random.randInt(0, indexatnode)
                 randomNum2 =random.randInt(1, n//2)
                 randomNumUse = randomNum // randomNum2
-                for num in randomNumUse:
-                    graph.addUndirectedEdge(node, num)
+                for node2 in randomNumUse:
+                    graph.addUndirectedEdge(node1, node2)
             
             return graph
         
