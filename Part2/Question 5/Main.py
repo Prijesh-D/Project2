@@ -8,18 +8,20 @@ import random
 from WeightedGraph import WeightedGraph
 
 class Main:
-    def createRandomWeightedGraph(n):
+    def createRandomCompleteWeightedGraph(n):
         graph = WeightedGraph()
+        lst = []
         for num in range(n):
-            graph.addNode(num)
-        
+            randomNum = random.randint(0, n);
+            if randomNum not in lst:
+                lst.append(randomNum)
+                graph.addNode(num)
         nodelist = graph.getAllNodes()
-        
         for node in nodelist:
-            for num in range(n):
-                if node != num:
+            for node2 in range(n):
+                if node != node2:
                     randomWeight = random.randint(1, (n*n))
-                    graph.addWeightedEdge(node, num, randomWeight)
+                    graph.addWeightedEdge(node, node2, randomWeight)
         
         return graph
         
@@ -30,7 +32,7 @@ class Main:
         nodelist = graph.getAllNodes()
         nodelistlength = len(nodelist)
         for num in range(nodelistlength-1):
-            graph.addWeightedEdge(nodelist[num-1], nodelist[num], 1)
+            graph.addWeightedEdge(nodelist[num], nodelist[num+1], 1)
         return graph
     
     def dijkstras(start):
