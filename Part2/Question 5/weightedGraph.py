@@ -17,7 +17,7 @@ class WeightedGraph:
         self.nodeList.append(node)
     
     def addWeightedEdge(self, first, second, weight):
-        if first in self.nodeList or second in sel.nodeList:
+        if first in self.nodeList or second in self.nodeList:
             first.adjacentList[second] = weight
             
     def removeWeightedEdge(self, first, second):
